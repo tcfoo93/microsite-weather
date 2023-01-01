@@ -1,0 +1,12 @@
+/node_modules
+/.pnp
+.pnp.js
+
+/tests
+/coverage
+
+/build
+/release
+
+.scannerwork/
+.vscode/

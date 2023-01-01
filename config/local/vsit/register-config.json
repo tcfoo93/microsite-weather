@@ -1,0 +1,9 @@
+{
+    "subApps": [
+        {
+            "props": {
+                "publicPath": "/weather"
+            }
+        }
+    ]
+}

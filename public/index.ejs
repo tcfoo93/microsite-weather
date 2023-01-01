@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="theme-color" content="#000000" />
+	<meta http-equiv="Cache-Control" content="max-age=31536000" />
+	<meta name="description" content="Weather microsite with React Typescript."/>
+	<!-- <meta http-equiv="Pragma" content="no-cache" /> -->
+	<meta http-equiv="Expires" content="0" />
+	<title class="no-print">
+		<%= packageName %>
+	</title>
+</head>
+
+<body>
+	<noscript>You need to enable JavaScript to run this app.</noscript>
+	<div class="<%= packageName %> <%= packageName %>-root-cls" id="<%= packageName %>-root" />
+	<div class="<%= packageName %>-loading-overlay">
+		<div class="<%= packageName %>-loader"></div>
+	</div>
+	<div id="<%= packageName %>-version" hidden>
+		<span>
+			<%= appVersion %>
+		</span>
+		<span>
+			<%= buildDatetime %>
+		</span>
+
+	</div>
+</body>
+
+</html>

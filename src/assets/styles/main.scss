@@ -1,0 +1,107 @@
+@mixin respond($breakpoint) {
+    @if $breakpoint == extra-large-desktop {
+      @media only screen and (min-width: 1500px) {
+        @content;
+      }
+    }
+    @if $breakpoint == large-desktop {
+      @media only screen and (min-width: 1200px) and (max-width: 1499px) {
+        @content;
+      }
+    }
+    @if $breakpoint == small-desktop {
+      @media only screen and (min-width: 992px) and (max-width: 1199px) {
+        @content;
+      }
+    }
+    @if $breakpoint == extra-large-mobile {
+      @media only screen and (min-width: 768px) and (max-width: 991px) {
+        @content;
+      }
+    }
+    @if $breakpoint == large-mobile {
+      @media only screen and (max-width: 767px) {
+        @content;
+      }
+    }
+    @if $breakpoint == small-mobile {
+      @media only screen and (max-width: 575px) {
+        @content;
+      }
+    }
+    @if $breakpoint == extra-small-mobile {
+      @media only screen and (max-width: 479px) {
+        @content;
+      }
+    }
+}
+
+%full-screen {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    width: auto;
+    min-width: 100%;
+    height: auto;
+    min-height: 100%;
+}
+
+%button-transparent {
+    background-color: #ffffff00;
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, p, a 
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-container {
+    z-index: 1;
+    height: 100%;
+    margin: auto;
+    max-width: 100%;
+    position: relative;
+}
+
+.background-video {
+    @extend %full-screen;
+}
+
+.btn-logo {
+    &-light {
+        @extend %button-transparent;
+        border: 1px solid gray;
+        color: gray;
+    }
+    &-dark {
+        @extend %button-transparent;
+        border: 1px solid rgb(0, 0, 0);
+        color: rgb(0, 0, 0);
+    }
+}
+
+// .background-image {
+//     @extend %full-screen;
+//     background-image: url('../images/img-800x368.jpg');
+//     @include respond(extra-large-desktop) {
+//         background-image: url('../images/img-1920x1200.jpg');
+//     }
+//     @include respond(large-desktop) {
+//         background-image: url('../images/img-1280x800.jpg');
+//     }
+// }
+
+// @media all and (min-width: 768px) {
+
+// }

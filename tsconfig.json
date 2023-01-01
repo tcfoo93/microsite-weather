@@ -1,0 +1,32 @@
+{
+	"compilerOptions": {
+		"target": "es6",
+		"lib": ["dom", "dom.iterable", "es6", "esnext"],
+		"allowJs": true,
+		"skipLibCheck": true,
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true,
+		"strict": true,
+		"forceConsistentCasingInFileNames": true,
+		"noFallthroughCasesInSwitch": true,
+		"module": "esnext",
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"isolatedModules": false,
+		"noEmit": false,
+		"jsx": "react-jsx",
+		"experimentalDecorators": true,
+		"baseUrl": ".",
+		"typeRoots": ["./react-src/types", "./node_modules/@types", "./typings", "src/typings.d.ts"],
+		"paths": {
+			"@src/*": ["src/*"],
+			"@assets/*": ["src/assets/*"],
+			"@services/*": ["src/app/services/*"],
+			"@modules/*": ["src/app/modules/*"],
+			"@pages/*": ["src/app/pages/*"],
+		},
+		"sourceMap": true
+	},
+	"include": ["src"],
+	"exclude": ["dist", "build", "release", "node_modules", "**/*.test.js"]
+}
