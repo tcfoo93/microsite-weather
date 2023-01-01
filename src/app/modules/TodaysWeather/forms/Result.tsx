@@ -1,6 +1,5 @@
 import React, { useLayoutEffect, useState } from "react";
 import { IResultState } from "../TodaysWeather.interfaces";
-import ApiRequest from "@src/app/services/ApiRequest.service";
  
 function Listing() {
   const [state, setState] = useState<IResultState>({

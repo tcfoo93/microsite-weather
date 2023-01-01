@@ -1,6 +1,5 @@
 import React, { useLayoutEffect, useState } from "react";
 import { IListingState } from "../SearchHistory.interfaces";
-import ApiRequest from "@src/app/services/ApiRequest.service";
  
 function Listing() {
   const [state, setState] = useState<IListingState>({
