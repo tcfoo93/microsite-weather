@@ -1,3 +1,136 @@
 {
-  "searchHistory": []
+  "searchHistory": [
+    {
+      "coord": {
+        "lon": 101.5,
+        "lat": 3.1667
+      },
+      "weather": [
+        {
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02n"
+        }
+      ],
+      "base": "stations",
+      "main": {
+        "temp": 298.47,
+        "feels_like": 299.28,
+        "temp_min": 298.12,
+        "temp_max": 298.9,
+        "pressure": 1013,
+        "humidity": 85
+      },
+      "visibility": 8000,
+      "wind": {
+        "speed": 0,
+        "deg": 0
+      },
+      "clouds": {
+        "all": 20
+      },
+      "dt": 1672598972,
+      "sys": {
+        "type": 2,
+        "id": 131484,
+        "country": "MY",
+        "sunrise": 1672615159,
+        "sunset": 1672658147
+      },
+      "timezone": 28800,
+      "id": "6a644aef-dfe1-43e3-8b49-434a38424f8f",
+      "name": "Selangor",
+      "cod": 200,
+      "dateTime": "2023-01-01T18:49:32.881Z"
+    },
+    {
+      "coord": {
+        "lon": 101.5,
+        "lat": 3.1667
+      },
+      "weather": [
+        {
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02n"
+        }
+      ],
+      "base": "stations",
+      "main": {
+        "temp": 298.47,
+        "feels_like": 299.28,
+        "temp_min": 298.12,
+        "temp_max": 298.9,
+        "pressure": 1013,
+        "humidity": 85
+      },
+      "visibility": 8000,
+      "wind": {
+        "speed": 0,
+        "deg": 0
+      },
+      "clouds": {
+        "all": 20
+      },
+      "dt": 1672598972,
+      "sys": {
+        "type": 2,
+        "id": 131484,
+        "country": "MY",
+        "sunrise": 1672615159,
+        "sunset": 1672658147
+      },
+      "timezone": 28800,
+      "id": "3ae11f43-5a57-4e7c-b7c3-6326209df865",
+      "name": "Selangor",
+      "cod": 200,
+      "dateTime": "2023-01-01T18:51:25.058Z"
+    },
+    {
+      "coord": {
+        "lon": 101.5,
+        "lat": 3.1667
+      },
+      "weather": [
+        {
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02n"
+        }
+      ],
+      "base": "stations",
+      "main": {
+        "temp": 298.47,
+        "feels_like": 299.28,
+        "temp_min": 298.12,
+        "temp_max": 298.9,
+        "pressure": 1013,
+        "humidity": 85
+      },
+      "visibility": 8000,
+      "wind": {
+        "speed": 0,
+        "deg": 0
+      },
+      "clouds": {
+        "all": 20
+      },
+      "dt": 1672598972,
+      "sys": {
+        "type": 2,
+        "id": 131484,
+        "country": "MY",
+        "sunrise": 1672615159,
+        "sunset": 1672658147
+      },
+      "timezone": 28800,
+      "id": "376d6931-5801-458a-a92b-71a2f928c2db",
+      "name": "Selangor",
+      "cod": 200,
+      "dateTime": "2023-01-01T18:53:01.058Z"
+    }
+  ]
 }
