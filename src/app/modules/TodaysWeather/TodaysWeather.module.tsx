@@ -3,11 +3,14 @@ import WeatherPanel from '@src/app/components/WeatherPanel/WeatherPanel';
 import { IGetCurrentWeatherResponse } from '@src/app/services/ApiRequest.interface';
 import ApiRequest from '@src/app/services/ApiRequest.service';
 import React, { useState, ChangeEvent } from 'react';
-import { IResultState, ISearchFormData } from './TodaysWeather.interfaces';
+import { ITodaysWeatherState, ISearchFormData } from './TodaysWeather.interfaces';
 import Notification from '@src/app/components/Notification/Notification';
+import { IModuleProps } from '@src/MicrositeWeather.interface';
 
-function TodaysWeatherModule() {
-	const [state, setState] = useState<IResultState>({
+function TodaysWeatherModule(props: IModuleProps) {
+	const { landingState, setLandingState } = props;
+
+	const [state, setState] = useState<ITodaysWeatherState>({
 		currentWeather: {} as IGetCurrentWeatherResponse,
 		isError: false
 	});
@@ -41,10 +44,25 @@ function TodaysWeatherModule() {
 			isError: false,
 			currentWeather
 		})
+
+		await new ApiRequest().addSearchItem(currentWeather)
+		.then(
+			(res) => {
+				let searchHistoryListing = landingState?.searchHistoryListing;
+				searchHistoryListing?.unshift(res.data)
+				setLandingState && setLandingState({
+					...landingState,
+					searchHistoryListing: searchHistoryListing ?? [] as Array<IGetCurrentWeatherResponse>
+				})
+			}
+		);
 	}
 
 	const onResetClick = () =>{
-	//reset formData
+		setFormData({
+			city: '',
+			country: ''
+		})
 	}
 
 	const onGenericEventChange = (evt: ChangeEvent<HTMLInputElement>) => {
@@ -70,6 +88,7 @@ function TodaysWeatherModule() {
 							type={'text'}
 							value={formData.city}
 							onChange={onGenericEventChange}
+							style={{width: '79%'}}
 						/>
 					</div>
 					<div className="field-group">
@@ -80,6 +99,7 @@ function TodaysWeatherModule() {
 							type={'text'}
 							value={formData.country}
 							onChange={onGenericEventChange}
+							style={{width: '70%'}}
 						/>
 					</div>
 					<div className="field-group">

@@ -1,7 +1,15 @@
 import { IGetCurrentWeatherResponse } from "./app/services/ApiRequest.interface"
 
-export interface IModuleProps {
+export interface IPageProps {
 	index?: boolean
+}
+export interface IModuleProps {
+	landingState?: ILandingState
+	setLandingState?: (value: ILandingState) => void;
+}
+
+export interface ILandingState {
+	searchHistoryListing: Array<IGetCurrentWeatherResponse>
 }
 
 export interface IAppProps {

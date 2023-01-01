@@ -1,5 +1,7 @@
 import axios from 'axios';
 import { ISearchFormData } from '../modules/TodaysWeather/TodaysWeather.interfaces';
+import { v4 as generateUUID } from 'uuid'
+import { IGetCurrentWeatherResponse } from './ApiRequest.interface';
 
 export default class ApiRequest {
 	getPathConfig() {
@@ -9,6 +11,9 @@ export default class ApiRequest {
 			},
 			get openWeatherApi() {
 				return { url : 'https://api.openweathermap.org/data/2.5/weather', method: 'GET' };
+			},
+			get searchHistoryApiUrl () {
+				return 'http://localhost:3009/searchHistory'
 			}
 		}
 		return result;
@@ -36,6 +41,33 @@ export default class ApiRequest {
 					}
 		}
 		const result = await axios(axiosParams);
+		return Promise.resolve(result)
+	}
+
+	async fetchSearchHistory() {
+		const axiosParams = {
+			url: this.getPathConfig().searchHistoryApiUrl,
+			method: 'GET',
+			params: {
+						_sort: "dateTime",
+						_order: "desc"
+					}
+		}
+		const result = await axios(axiosParams);
+		return Promise.resolve(result)
+	}
+
+	async addSearchItem(data: IGetCurrentWeatherResponse) {
+		let requestBody = {
+			...data,
+			id: generateUUID(),
+		}
+		const result = await axios.post(this.getPathConfig().searchHistoryApiUrl, requestBody);
+		return Promise.resolve(result)
+	}
+
+	async deleteSearchItem( id: string ) {
+		const result = await axios.delete(this.getPathConfig().searchHistoryApiUrl + `/${id}`);
 		return Promise.resolve(result)
 	}
 }

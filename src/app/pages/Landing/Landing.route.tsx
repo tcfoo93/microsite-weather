@@ -1,10 +1,10 @@
 import { lazy } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { AppConstantRoutes } from '@src/MicrositeWeather.constants';
-import { IModuleProps } from '@src/MicrositeWeather.interface';
+import { IPageProps } from '@src/MicrositeWeather.interface';
 const Landing = lazy(() => import(`./Landing.page`))
 
-function LandingPage(props:IModuleProps) {
+function LandingPage(props: IPageProps) {
 	const { index } = props;
 	return (
 		<Routes>

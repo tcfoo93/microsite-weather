@@ -1,8 +1,3 @@
-export interface IListingState {
+export interface ISearchHistoryState {
 	loaded: boolean
 }
-
-// export interface IE {
-// 	state: IListingState
-// 	setState: (value: IListingState) => void;
-// }

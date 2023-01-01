@@ -1,6 +1,6 @@
 import { IGetCurrentWeatherResponse } from "@src/app/services/ApiRequest.interface"
 
-export interface IResultState {
+export interface ITodaysWeatherState {
 	currentWeather: IGetCurrentWeatherResponse
 	isError: boolean
 }

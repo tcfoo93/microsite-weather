@@ -42,7 +42,7 @@ export interface IGetCurrentWeatherResponse {
         sunset: number
     }
     timezone: number
-    id: number
+    id: string
     name: string;
     cod: number
 }
