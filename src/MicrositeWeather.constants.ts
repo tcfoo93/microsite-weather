@@ -24,3 +24,9 @@ export const AppConstantRoutes = {
 		}
 	}
 }
+
+export const NotificationType = {
+	get error() {
+		return { value: 'error', message: 'Not Found' };
+	}
+}

@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { IListingState } from "../SearchHistory.interfaces";
  
 function Listing() {
@@ -13,7 +13,7 @@ function Listing() {
     });
   };
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     onPageLoad();
   }, []);
 

@@ -66,16 +66,100 @@ h1, h2, h3, p, a
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.main-container {
-    z-index: 1;
-    height: 100%;
-    margin: auto;
-    max-width: 100%;
-    position: relative;
+.header-border {
+    border-bottom: 1px solid #000;
 }
 
-.background-video {
+.main-flexbox-full {
+    display: flex;
+    flex: 1;
+    flex-basis: auto;
+    box-sizing: border-box;
     @extend %full-screen;
+}
+
+.main-container {
+    display: block;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+    box-sizing: border-box;
+}
+
+.vertical {
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.flex-30 {
+    flex: 0.3;
+}
+
+.flex-70 {
+    flex: 0.7;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-5 {
+    width: 41.6%;
+}
+
+.col-4 {
+    width: 33.3%;
+}
+
+.content-center {
+    width: 95%;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    @include respond(extra-large-desktop) {
+        width: 50%;
+    }
+    @include respond(large-desktop) {
+        width: 65%;
+    }
+    @include respond(small-desktop) {
+        width: 80%;
+    }
+}
+
+.field-group {
+    margin-right: 10px;
+}
+
+.primary-button {
+    margin-right: 5px;
+}
+
+.alert-error {
+    background-color: #fce3e3;
+    border-color: #facccc;
+    color: #8a3b3b;
+}
+
+.alert {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #8a3b3bcc;
+    border-radius: 4px;
+    width: 100%;
+    font-size: smaller;
+}
+
+.weather-title {
+    margin-block-start: 10px;
+    margin-block-end: 10px;
 }
 
 .btn-logo {
@@ -90,18 +174,3 @@ h1, h2, h3, p, a
         color: rgb(0, 0, 0);
     }
 }
-
-// .background-image {
-//     @extend %full-screen;
-//     background-image: url('../images/img-800x368.jpg');
-//     @include respond(extra-large-desktop) {
-//         background-image: url('../images/img-1920x1200.jpg');
-//     }
-//     @include respond(large-desktop) {
-//         background-image: url('../images/img-1280x800.jpg');
-//     }
-// }
-
-// @media all and (min-width: 768px) {
-
-// }
