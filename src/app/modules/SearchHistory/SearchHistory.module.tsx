@@ -6,6 +6,7 @@ import moment from 'moment';
 import deleteIcon from "@assets/icons/delete.png";
 import zoomIcon from "@assets/icons/zoom.png";
 import { IGetCurrentWeatherResponse } from '@src/app/services/ApiRequest.interface';
+import { ISearchFormData } from '../TodaysWeather/TodaysWeather.interfaces';
 
 function SearchHistoryModule(props: IModuleProps) {
 	const { landingState, setLandingState } = props;
@@ -17,7 +18,7 @@ function SearchHistoryModule(props: IModuleProps) {
 		await new ApiRequest().fetchSearchHistory()
 		.then(
 			(res) => {
-				setLandingState && setLandingState({
+				setLandingState({
 					...landingState,
 					searchHistoryListing: res.data
 				})
@@ -37,13 +38,20 @@ function SearchHistoryModule(props: IModuleProps) {
 		return null;
 	}
 
+	const onSearchClick = (searchFormData: ISearchFormData) =>{
+		setLandingState({
+			...landingState,
+			onSearchClick: true,
+			searchFormData
+		})
+	}
 	const onDeleteClick = async (id: string) => {
 		await new ApiRequest().deleteSearchItem(id)
 		.then(
 			() => {
-				let searchHistoryListing = landingState?.searchHistoryListing;
-				searchHistoryListing = searchHistoryListing?.filter((searchItem: IGetCurrentWeatherResponse) => searchItem.id !== id)
-				setLandingState && setLandingState({
+				let searchHistoryListing = landingState.searchHistoryListing;
+				searchHistoryListing = searchHistoryListing.filter((searchItem: IGetCurrentWeatherResponse) => searchItem.id !== id)
+				setLandingState({
 					...landingState,
 					searchHistoryListing: searchHistoryListing ?? [] as Array<IGetCurrentWeatherResponse>
 				})
@@ -64,7 +72,7 @@ function SearchHistoryModule(props: IModuleProps) {
 									<span style={{flex: '0.65'}}>{data.name + ', ' + data.sys.country}</span>
 									<span style={{flex: '0.25'}}>{moment(data.dateTime).format("YYYY-MM-DD hh:mm:ss A")}</span>
 									<div style={{flex: '0.04'}}>
-										<img className="record-icon" src={zoomIcon} />
+										<img className="record-icon" src={zoomIcon} onClick={()=> onSearchClick({city: data.name, country: data.sys.country})}/>
 									</div>
 									<div style={{flex: '0.04'}}>
 										<img className="record-icon" src={deleteIcon} onClick={()=> onDeleteClick(data.id)}/>

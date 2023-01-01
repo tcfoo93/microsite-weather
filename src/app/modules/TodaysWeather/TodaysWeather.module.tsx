@@ -2,7 +2,7 @@ import { NotificationType } from '@src/MicrositeWeather.constants';
 import WeatherPanel from '@src/app/components/WeatherPanel/WeatherPanel';
 import { IGetCurrentWeatherResponse } from '@src/app/services/ApiRequest.interface';
 import ApiRequest from '@src/app/services/ApiRequest.service';
-import React, { useState, ChangeEvent } from 'react';
+import React, { useState, ChangeEvent, useEffect } from 'react';
 import { ITodaysWeatherState, ISearchFormData } from './TodaysWeather.interfaces';
 import Notification from '@src/app/components/Notification/Notification';
 import { IModuleProps } from '@src/MicrositeWeather.interface';
@@ -17,7 +17,7 @@ function TodaysWeatherModule(props: IModuleProps) {
 
 	const [formData, setFormData] = useState<ISearchFormData>({} as ISearchFormData);
 
-	const onSearchClick = async () =>{
+	const onSearchClick = async (formData: ISearchFormData) =>{
 		const currentWeather = await new ApiRequest().getCurrentWeather(formData)
 		.then(
 			(res) => {
@@ -48,10 +48,12 @@ function TodaysWeatherModule(props: IModuleProps) {
 		await new ApiRequest().addSearchItem(currentWeather)
 		.then(
 			(res) => {
-				let searchHistoryListing = landingState?.searchHistoryListing;
-				searchHistoryListing?.unshift(res.data)
-				setLandingState && setLandingState({
+				let searchHistoryListing = landingState.searchHistoryListing;
+				searchHistoryListing.unshift(res.data)
+				setLandingState({
 					...landingState,
+					onSearchClick: false,
+					searchFormData: {} as ISearchFormData,
 					searchHistoryListing: searchHistoryListing ?? [] as Array<IGetCurrentWeatherResponse>
 				})
 			}
@@ -73,6 +75,13 @@ function TodaysWeatherModule(props: IModuleProps) {
 			[id] : value
 		})
 	}
+
+	useEffect(()=>{
+		if(landingState.onSearchClick){
+			setFormData({...landingState.searchFormData});
+			onSearchClick(landingState.searchFormData);
+		}
+	},[landingState])
 
 	return (
 	<React.Fragment>
@@ -107,7 +116,7 @@ function TodaysWeatherModule(props: IModuleProps) {
 							id="btn-search"
 							name="btn-search"
 							className="primary-button"
-							onClick={onSearchClick}
+							onClick={()=> onSearchClick(formData)}
 						>
 							Search
 						</button>
