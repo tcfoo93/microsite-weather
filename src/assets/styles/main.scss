@@ -116,6 +116,7 @@ h1, h2, h3, p, a
 }
 
 .weather-panel {
+    padding-left: 20px;
     width: 45%;
     @include respond(small-mobile) {
         width: 65%;

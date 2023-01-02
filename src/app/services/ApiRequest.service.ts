@@ -58,16 +58,24 @@ export default class ApiRequest {
 	}
 
 	async addSearchItem(data: IGetCurrentWeatherResponse) {
-		let requestBody = {
-			...data,
-			id: generateUUID(),
+		const axiosParams = {
+			url: this.getPathConfig().searchHistoryApiUrl,
+			method: 'POST',
+			data: {
+				...data,
+				id: generateUUID(),
+			}
 		}
-		const result = await axios.post(this.getPathConfig().searchHistoryApiUrl, requestBody);
+		const result = await axios(axiosParams);
 		return Promise.resolve(result)
 	}
 
 	async deleteSearchItem( id: string ) {
-		const result = await axios.delete(this.getPathConfig().searchHistoryApiUrl + `/${id}`);
+		const axiosParams = {
+			url: this.getPathConfig().searchHistoryApiUrl + `/${id}`,
+			method: 'DELETE'
+		}
+		const result = await axios(axiosParams);
 		return Promise.resolve(result)
 	}
 }

@@ -228,95 +228,47 @@
     },
     {
       "coord": {
-        "lon": 117,
-        "lat": 5.5
-      },
-      "weather": [
-        {
-          "id": 804,
-          "main": "Clouds",
-          "description": "overcast clouds",
-          "icon": "04n"
-        }
-      ],
-      "base": "stations",
-      "main": {
-        "temp": 296.19,
-        "feels_like": 297.13,
-        "temp_min": 296.19,
-        "temp_max": 296.19,
-        "pressure": 1011,
-        "humidity": 99,
-        "sea_level": 1011,
-        "grnd_level": 998
-      },
-      "visibility": 10000,
-      "wind": {
-        "speed": 0.41,
-        "deg": 267,
-        "gust": 0.41
-      },
-      "clouds": {
-        "all": 100
-      },
-      "dt": 1672600467,
-      "sys": {
-        "country": "MY",
-        "sunrise": 1672611676,
-        "sunset": 1672654188
-      },
-      "timezone": 28800,
-      "id": "d160c8bd-5d80-4abd-bd81-8603db1bb088",
-      "name": "Sabah",
-      "cod": 200,
-      "dateTime": "2023-01-01T19:14:27.164Z"
-    },
-    {
-      "coord": {
         "lon": 101.6067,
         "lat": 3.1073
       },
       "weather": [
         {
-          "id": 804,
+          "id": 801,
           "main": "Clouds",
-          "description": "overcast clouds",
-          "icon": "04n"
+          "description": "few clouds",
+          "icon": "02d"
         }
       ],
       "base": "stations",
       "main": {
-        "temp": 298.33,
-        "feels_like": 299.2,
-        "temp_min": 297.99,
-        "temp_max": 298.4,
-        "pressure": 1012,
-        "humidity": 88,
-        "sea_level": 1012,
-        "grnd_level": 1007
+        "temp": 297.78,
+        "feels_like": 298.62,
+        "temp_min": 296.88,
+        "temp_max": 298.38,
+        "pressure": 1013,
+        "humidity": 89
       },
-      "visibility": 10000,
+      "visibility": 9000,
       "wind": {
-        "speed": 0.05,
-        "deg": 198,
-        "gust": 0.67
+        "speed": 0,
+        "deg": 0
       },
       "clouds": {
-        "all": 100
+        "all": 20
       },
-      "dt": 1672600164,
+      "dt": 1672619114,
       "sys": {
-        "type": 2,
-        "id": 2078475,
+        "type": 1,
+        "id": 9446,
         "country": "MY",
         "sunrise": 1672615127,
         "sunset": 1672658128
       },
       "timezone": 28800,
-      "id": "c6d6e18e-ae43-4098-b9c4-a859ac3db55c",
+      "id": "a396a578-b7c3-418c-acb9-cb63607dabcd",
       "name": "Petaling Jaya",
       "cod": 200,
-      "dateTime": "2023-01-01T19:14:29.917Z"
+      "dateTime": "2023-01-02T00:25:14.330Z"
     }
   ]
 }

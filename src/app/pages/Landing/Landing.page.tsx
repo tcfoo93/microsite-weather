@@ -1,7 +1,7 @@
 import { ILandingState } from "@src/MicrositeWeather.interface";
 import SearchHistoryModule from "@src/app/modules/SearchHistory/SearchHistory.module";
 import TodaysWeatherModule from "@src/app/modules/TodaysWeather/TodaysWeather.module";
-import React, { useState } from "react";
+import { useState } from "react";
  
 function Landing() {
   const [landingState, setLandingState] = useState<ILandingState>({} as ILandingState);

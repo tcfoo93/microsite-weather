@@ -2,7 +2,7 @@
  * For a detailed explanation regarding each configuration property, visit:
  * https://jestjs.io/docs/configuration
  */
-const esModules = ['react-id-swiper','swiper','ssr-window','dom7'].join('|');
+const esModules = ['ssr-window','dom7'].join('|');
 
 module.exports = {
     testEnvironment: 'jsdom',
@@ -22,7 +22,6 @@ module.exports = {
     },
     moduleNameMapper: {
         '^uuid$': require.resolve('uuid'),
-        '^Swiper$': require.resolve('react-id-swiper'),
         '^@src/(.*)$': '<rootDir>/src/$1',
         '^@assets/(.*)$': '<rootDir>/src/assets/$1',
         '^@services/(.*)$': '<rootDir>/src/app/services/$1',

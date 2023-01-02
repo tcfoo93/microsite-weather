@@ -67,15 +67,15 @@ function SearchHistoryModule(props: IModuleProps) {
 					{(landingState && landingState?.searchHistoryListing.length > 0) ? 
 						landingState?.searchHistoryListing.map((data: IGetCurrentWeatherResponse, index: number)=>{
 							return (
-								<div className="row col-12 record-border" style={{paddingTop: '10px', paddingBottom: '10px'}}>
+								<div className="row col-12 record-border" key={index} style={{paddingTop: '10px', paddingBottom: '10px'}}>
 									<span style={{flex: '0.02'}}>{index + 1}.</span>
-									<span style={{flex: '0.65'}}>{data.name + ', ' + data.sys.country}</span>
-									<span style={{flex: '0.25'}}>{moment(data.dateTime).format("YYYY-MM-DD hh:mm:ss A")}</span>
+									<span style={{flex: '0.65'}}>{data?.name + ', ' + data?.sys?.country}</span>
+									<span style={{flex: '0.25'}}>{moment(data?.dateTime).format("YYYY-MM-DD hh:mm:ss A")}</span>
 									<div style={{flex: '0.04'}}>
-										<img className="record-icon" src={zoomIcon} onClick={()=> onSearchClick({city: data.name, country: data.sys.country})}/>
+										<img className="record-icon" src={zoomIcon} onClick={()=> onSearchClick({city: data?.name, country: data?.sys?.country})}/>
 									</div>
 									<div style={{flex: '0.04'}}>
-										<img className="record-icon" src={deleteIcon} onClick={()=> onDeleteClick(data.id)}/>
+										<img className="record-icon" src={deleteIcon} onClick={()=> onDeleteClick(data?.id)}/>
 									</div>
 								</div>
 							)
