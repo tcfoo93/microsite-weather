@@ -42,7 +42,7 @@ function SearchHistoryModule(props: IModuleProps) {
 				searchHistoryListing = searchHistoryListing.filter((searchItem: IGetCurrentWeatherResponse) => searchItem.id !== id)
 				setLandingState({
 					...landingState,
-					searchHistoryListing: searchHistoryListing ?? [] as Array<IGetCurrentWeatherResponse>
+					searchHistoryListing: searchHistoryListing
 				})
 			}
 		);
@@ -70,6 +70,7 @@ function SearchHistoryModule(props: IModuleProps) {
 									</div>
 									<div style={{flex: '0.04'}}>
 										<img 
+											id='icon-delete'
 											className="record-icon" 
 											src={deleteIcon}
 											onClick={()=> onDeleteClick(data?.id)}

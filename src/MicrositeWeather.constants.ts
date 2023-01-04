@@ -18,9 +18,6 @@ export const AppConstantRoutes = {
 					return '/today';
 				}
 			}
-		},
-		get routeToPrevious() {
-			return '../';
 		}
 	}
 }

@@ -1,11 +1,11 @@
-import TodaysWMeatherModule from "../TodaysWeather.module";
+import TodaysWeatherModule from "../TodaysWeather.module";
 import React from 'react';
 import { fireEvent, render, waitFor, act } from '@testing-library/react'
 import ApiRequest from '@src/app/services/ApiRequest.service'
 
 jest.mock('@src/app/services/ApiRequest.service');
 
-describe('TodaysWMeatherModule', () => {
+describe('TodaysWeatherModule', () => {
     const props = {
       landingState: {
         searchHistoryListing: [],
@@ -16,7 +16,7 @@ describe('TodaysWMeatherModule', () => {
     }
 
     const renderPage = () => render(
-      <TodaysWMeatherModule {...props}/>
+      <TodaysWeatherModule {...props}/>
     )
 
     const mockSearchWeatherResponse = {
