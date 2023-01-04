@@ -2,15 +2,13 @@ import axios from 'axios'
 import ApiRequest from '@src/app/services/ApiRequest.service'
 jest.mock('axios')
 
-const request = new ApiRequest()
-
 describe('getCurrentWeather', () => {
     it('successful call', async () => {
         const mockData = {
             data: 'test'
         }
         axios.mockResolvedValue(mockData)
-        const res = await request.getCurrentWeather({})
+        const res = await ApiRequest.getCurrentWeather({})
         expect(res).toBe(mockData)
     })
 
@@ -19,7 +17,7 @@ describe('getCurrentWeather', () => {
             data: 'test'
         }
         axios.mockResolvedValue(mockData)
-        const res = await request.getCurrentWeather({city: 'Johor'})
+        const res = await ApiRequest.getCurrentWeather({city: 'Johor'})
         expect(res).toBe(mockData)
     })
 
@@ -28,7 +26,7 @@ describe('getCurrentWeather', () => {
             data: 'test'
         }
         axios.mockResolvedValue(mockData)
-        const res = await request.getCurrentWeather({city: 'Johor', country: 'MY'})
+        const res = await ApiRequest.getCurrentWeather({city: 'Johor', country: 'MY'})
         expect(res).toBe(mockData)
     })
 
@@ -38,7 +36,7 @@ describe('getCurrentWeather', () => {
         }
         axios.mockRejectedValue(mockData)
         try {
-            await request.getCurrentWeather({})
+            await ApiRequest.getCurrentWeather({})
         } catch (err) {
             expect(err).toBe(mockData)
         }
@@ -51,7 +49,7 @@ describe('fetchSearchHistory', () => {
             data: 'test'
         }
         axios.mockResolvedValue(mockData)
-        const res = await request.fetchSearchHistory({})
+        const res = await ApiRequest.fetchSearchHistory()
         expect(res).toBe(mockData)
     })
 
@@ -61,7 +59,7 @@ describe('fetchSearchHistory', () => {
         }
         axios.mockRejectedValue(mockData)
         try {
-            await request.fetchSearchHistory({})
+            await ApiRequest.fetchSearchHistory()
         } catch (err) {
             expect(err).toBe(mockData)
         }
@@ -74,7 +72,7 @@ describe('addSearchItem', () => {
             data: 'test'
         }
         axios.mockResolvedValue(mockData)
-        const res = await request.addSearchItem({})
+        const res = await ApiRequest.addSearchItem({})
         expect(res).toBe(mockData)
     })
 
@@ -84,7 +82,7 @@ describe('addSearchItem', () => {
         }
         axios.mockRejectedValue(mockData)
         try {
-            await request.addSearchItem({})
+            await ApiRequest.addSearchItem({})
         } catch (err) {
             expect(err).toBe(mockData)
         }
@@ -97,7 +95,7 @@ describe('deleteSearchItem', () => {
             data: 'test'
         }
         axios.mockResolvedValue(mockData)
-        const res = await request.deleteSearchItem()
+        const res = await ApiRequest.deleteSearchItem()
         expect(res).toBe(mockData)
     })
 
@@ -107,7 +105,7 @@ describe('deleteSearchItem', () => {
         }
         axios.mockRejectedValue(mockData)
         try {
-            await request.deleteSearchItem()
+            await ApiRequest.deleteSearchItem()
         } catch (err) {
             expect(err).toBe(mockData)
         }

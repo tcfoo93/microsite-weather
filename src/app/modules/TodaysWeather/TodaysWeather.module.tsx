@@ -15,10 +15,10 @@ function TodaysWeatherModule(props: IModuleProps) {
 		isError: false
 	});
 
-	const [formData, setFormData] = useState<ISearchFormData>({} as ISearchFormData);
+	const [formData, setFormData] = useState<ISearchFormData>({city: '', country: ''} as ISearchFormData);
 
 	const onSearchClick = async (formData: ISearchFormData) =>{
-		const currentWeather = await new ApiRequest().getCurrentWeather(formData)
+		const currentWeather = await ApiRequest.getCurrentWeather(formData)
 		.then(
 			(res) => {
 				return { 
@@ -45,7 +45,7 @@ function TodaysWeatherModule(props: IModuleProps) {
 			currentWeather
 		})
 
-		await new ApiRequest().addSearchItem(currentWeather)
+		await ApiRequest.addSearchItem(currentWeather)
 		.then(
 			(res) => {
 				let searchHistoryListing = landingState.searchHistoryListing;
@@ -54,7 +54,7 @@ function TodaysWeatherModule(props: IModuleProps) {
 					...landingState,
 					onSearchClick: false,
 					searchFormData: {} as ISearchFormData,
-					searchHistoryListing: searchHistoryListing ?? [] as Array<IGetCurrentWeatherResponse>
+					searchHistoryListing: searchHistoryListing
 				})
 			}
 		);

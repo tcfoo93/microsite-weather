@@ -3,7 +3,7 @@ import { ISearchFormData } from '../modules/TodaysWeather/TodaysWeather.interfac
 import { v4 as generateUUID } from 'uuid'
 import { IGetCurrentWeatherResponse } from './ApiRequest.interface';
 
-export default class ApiRequest {
+const ApiRequest = {
 	getPathConfig() {
 		const result = {
 			get openWeatherAppId() {
@@ -17,7 +17,7 @@ export default class ApiRequest {
 			}
 		}
 		return result;
-	}
+	},
 
 	async getCurrentWeather(formData: ISearchFormData) {
 		const { city, country } = formData;
@@ -42,7 +42,7 @@ export default class ApiRequest {
 		}
 		const result = await axios(axiosParams);
 		return Promise.resolve(result)
-	}
+	},
 
 	async fetchSearchHistory() {
 		const axiosParams = {
@@ -55,7 +55,7 @@ export default class ApiRequest {
 		}
 		const result = await axios(axiosParams);
 		return Promise.resolve(result)
-	}
+	},
 
 	async addSearchItem(data: IGetCurrentWeatherResponse) {
 		const axiosParams = {
@@ -68,7 +68,7 @@ export default class ApiRequest {
 		}
 		const result = await axios(axiosParams);
 		return Promise.resolve(result)
-	}
+	},
 
 	async deleteSearchItem( id: string ) {
 		const axiosParams = {
@@ -79,3 +79,5 @@ export default class ApiRequest {
 		return Promise.resolve(result)
 	}
 }
+
+export default ApiRequest

@@ -269,6 +269,333 @@
       "name": "Petaling Jaya",
       "cod": 200,
       "dateTime": "2023-01-02T00:25:14.330Z"
+    },
+    {
+      "coord": {
+        "lon": 103.5,
+        "lat": 2
+      },
+      "weather": [
+        {
+          "id": 804,
+          "main": "Clouds",
+          "description": "overcast clouds",
+          "icon": "04d"
+        }
+      ],
+      "base": "stations",
+      "main": {
+        "temp": 298.97,
+        "feels_like": 299.83,
+        "temp_min": 298.97,
+        "temp_max": 299.42,
+        "pressure": 1014,
+        "humidity": 85,
+        "sea_level": 1014,
+        "grnd_level": 1002
+      },
+      "visibility": 10000,
+      "wind": {
+        "speed": 2.14,
+        "deg": 11,
+        "gust": 7.4
+      },
+      "clouds": {
+        "all": 100
+      },
+      "dt": 1672621996,
+      "sys": {
+        "type": 2,
+        "id": 2078507,
+        "country": "MY",
+        "sunrise": 1672614560,
+        "sunset": 1672657786
+      },
+      "timezone": 28800,
+      "id": "b40232fa-f211-423c-be31-e8930d075698",
+      "name": "Johor",
+      "cod": 200,
+      "dateTime": "2023-01-02T01:14:32.362Z"
+    },
+    {
+      "coord": {
+        "lon": 103.5,
+        "lat": 2
+      },
+      "weather": [
+        {
+          "id": 804,
+          "main": "Clouds",
+          "description": "overcast clouds",
+          "icon": "04d"
+        }
+      ],
+      "base": "stations",
+      "main": {
+        "temp": 298.97,
+        "feels_like": 299.83,
+        "temp_min": 298.97,
+        "temp_max": 299.42,
+        "pressure": 1014,
+        "humidity": 85,
+        "sea_level": 1014,
+        "grnd_level": 1002
+      },
+      "visibility": 10000,
+      "wind": {
+        "speed": 2.14,
+        "deg": 11,
+        "gust": 7.4
+      },
+      "clouds": {
+        "all": 100
+      },
+      "dt": 1672621996,
+      "sys": {
+        "type": 2,
+        "id": 2078507,
+        "country": "MY",
+        "sunrise": 1672614560,
+        "sunset": 1672657786
+      },
+      "timezone": 28800,
+      "id": "b52ffa27-61c0-426b-8601-0ae854734766",
+      "name": "Johor",
+      "cod": 200,
+      "dateTime": "2023-01-02T01:14:32.421Z"
+    },
+    {
+      "coord": {
+        "lon": 103.5,
+        "lat": 2
+      },
+      "weather": [
+        {
+          "id": 804,
+          "main": "Clouds",
+          "description": "overcast clouds",
+          "icon": "04d"
+        }
+      ],
+      "base": "stations",
+      "main": {
+        "temp": 298.97,
+        "feels_like": 299.83,
+        "temp_min": 298.97,
+        "temp_max": 299.42,
+        "pressure": 1014,
+        "humidity": 85,
+        "sea_level": 1014,
+        "grnd_level": 1002
+      },
+      "visibility": 10000,
+      "wind": {
+        "speed": 2.14,
+        "deg": 11,
+        "gust": 7.4
+      },
+      "clouds": {
+        "all": 100
+      },
+      "dt": 1672622071,
+      "sys": {
+        "type": 2,
+        "id": 2078507,
+        "country": "MY",
+        "sunrise": 1672614560,
+        "sunset": 1672657786
+      },
+      "timezone": 28800,
+      "id": "358581d9-95a1-49d4-9d07-a5b8c01c7394",
+      "name": "Johor",
+      "cod": 200,
+      "dateTime": "2023-01-02T01:14:32.431Z"
+    },
+    {
+      "coord": {
+        "lon": 103.5,
+        "lat": 2
+      },
+      "weather": [
+        {
+          "id": 804,
+          "main": "Clouds",
+          "description": "overcast clouds",
+          "icon": "04d"
+        }
+      ],
+      "base": "stations",
+      "main": {
+        "temp": 298.97,
+        "feels_like": 299.83,
+        "temp_min": 298.97,
+        "temp_max": 299.42,
+        "pressure": 1014,
+        "humidity": 85,
+        "sea_level": 1014,
+        "grnd_level": 1002
+      },
+      "visibility": 10000,
+      "wind": {
+        "speed": 2.14,
+        "deg": 11,
+        "gust": 7.4
+      },
+      "clouds": {
+        "all": 100
+      },
+      "dt": 1672622071,
+      "sys": {
+        "type": 2,
+        "id": 2078507,
+        "country": "MY",
+        "sunrise": 1672614560,
+        "sunset": 1672657786
+      },
+      "timezone": 28800,
+      "id": "1957732f-77fe-4c76-80a4-38411d83674e",
+      "name": "Johor",
+      "cod": 200,
+      "dateTime": "2023-01-02T01:14:32.459Z"
+    },
+    {
+      "coord": {
+        "lon": 103.5,
+        "lat": 2
+      },
+      "weather": [
+        {
+          "id": 804,
+          "main": "Clouds",
+          "description": "overcast clouds",
+          "icon": "04d"
+        }
+      ],
+      "base": "stations",
+      "main": {
+        "temp": 298.97,
+        "feels_like": 299.83,
+        "temp_min": 298.97,
+        "temp_max": 299.42,
+        "pressure": 1014,
+        "humidity": 85,
+        "sea_level": 1014,
+        "grnd_level": 1002
+      },
+      "visibility": 10000,
+      "wind": {
+        "speed": 2.14,
+        "deg": 11,
+        "gust": 7.4
+      },
+      "clouds": {
+        "all": 100
+      },
+      "dt": 1672622071,
+      "sys": {
+        "type": 2,
+        "id": 2078507,
+        "country": "MY",
+        "sunrise": 1672614560,
+        "sunset": 1672657786
+      },
+      "timezone": 28800,
+      "id": "a4817fc3-8f2c-49e4-aa89-77865322abae",
+      "name": "Johor",
+      "cod": 200,
+      "dateTime": "2023-01-02T01:14:32.473Z"
+    },
+    {
+      "coord": {
+        "lon": 101.5,
+        "lat": 3.1667
+      },
+      "weather": [
+        {
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02n"
+        }
+      ],
+      "base": "stations",
+      "main": {
+        "temp": 296.86,
+        "feels_like": 297.66,
+        "temp_min": 295.9,
+        "temp_max": 299.39,
+        "pressure": 1012,
+        "humidity": 91
+      },
+      "visibility": 9000,
+      "wind": {
+        "speed": 3.13,
+        "deg": 340,
+        "gust": 0
+      },
+      "clouds": {
+        "all": 20
+      },
+      "dt": 1672840647,
+      "sys": {
+        "type": 2,
+        "id": 131484,
+        "country": "MY",
+        "sunrise": 1672788010,
+        "sunset": 1672831004
+      },
+      "timezone": 28800,
+      "id": "6c699c68-03a0-46df-acab-d88d1abe0439",
+      "name": "Selangor",
+      "cod": 200,
+      "dateTime": "2023-01-04T13:57:28.414Z"
+    },
+    {
+      "id": "3270be8b-9d7d-4ebd-85ff-320a617a5d63"
+    },
+    {
+      "coord": {
+        "lon": 101.5,
+        "lat": 3.1667
+      },
+      "weather": [
+        {
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02n"
+        }
+      ],
+      "base": "stations",
+      "main": {
+        "temp": 296.39,
+        "feels_like": 297.22,
+        "temp_min": 295.66,
+        "temp_max": 299.26,
+        "pressure": 1013,
+        "humidity": 94
+      },
+      "visibility": 10000,
+      "wind": {
+        "speed": 4.12,
+        "deg": 330
+      },
+      "clouds": {
+        "all": 20
+      },
+      "dt": 1672842834,
+      "sys": {
+        "type": 2,
+        "id": 131484,
+        "country": "MY",
+        "sunrise": 1672788010,
+        "sunset": 1672831004
+      },
+      "timezone": 28800,
+      "id": "603d9db8-71b3-4897-bdc2-85c274a03068",
+      "name": "Selangor",
+      "cod": 200,
+      "dateTime": "2023-01-04T14:33:55.553Z"
     }
   ]
 }
