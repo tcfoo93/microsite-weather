@@ -31,7 +31,6 @@ function TodaysWeatherModule(props: IModuleProps) {
 					...state,
 					isError: true
 				});
-				return;
 			}
 		);
 
