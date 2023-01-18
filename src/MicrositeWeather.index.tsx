@@ -1,17 +1,15 @@
-import { useState } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './MicrositeWeather.app'
-import { AppConstants } from './MicrositeWeather.constants'
-import { IAppProps, IAppState } from './MicrositeWeather.interface'
+import { IAppProps } from './MicrositeWeather.interface'
 import '@assets/styles/main.scss'
+import ErrorBoundary from './app/components/ErrorBoundary/ErrorBoundary'
 
 export default function MicrositeWeather(props: IAppProps) {
-	const activeRule = '/'
-	const [state] = useState<IAppState>({
-		activeRule
-	})
-
-	return <App {...state} />
+	return (
+		<ErrorBoundary>
+			<App/>
+		</ErrorBoundary>
+	);
 }
 
 export async function bootstrap(props?: any) {
@@ -22,12 +20,11 @@ export async function bootstrap(props?: any) {
 }
 
 export async function mount(props?: any) {
-	const ctn = props?.container || undefined
-	const id = `${AppConstants.appName}-root`
-	const rootNode = ctn ? ctn.querySelector(`#${id}`) : document.getElementById(id)
+	const id = `root`
+	const rootNode = document.getElementById(id) as HTMLElement
 	const root = createRoot(rootNode)
 
-	root.render(<MicrositeWeather {...props} />)
+	root.render(<App />)
 }
 
 export async function unmount(props?: any) {

@@ -551,9 +551,6 @@
       "dateTime": "2023-01-04T13:57:28.414Z"
     },
     {
-      "id": "3270be8b-9d7d-4ebd-85ff-320a617a5d63"
-    },
-    {
       "coord": {
         "lon": 101.5,
         "lat": 3.1667
@@ -596,6 +593,144 @@
       "name": "Selangor",
       "cod": 200,
       "dateTime": "2023-01-04T14:33:55.553Z"
+    },
+    {
+      "coord": {
+        "lon": 103.5,
+        "lat": 2
+      },
+      "weather": [
+        {
+          "id": 804,
+          "main": "Clouds",
+          "description": "overcast clouds",
+          "icon": "04d"
+        }
+      ],
+      "base": "stations",
+      "main": {
+        "temp": 299.42,
+        "feels_like": 299.42,
+        "temp_min": 299.42,
+        "temp_max": 299.42,
+        "pressure": 1012,
+        "humidity": 96,
+        "sea_level": 1012,
+        "grnd_level": 1000
+      },
+      "visibility": 10000,
+      "wind": {
+        "speed": 0.47,
+        "deg": 73,
+        "gust": 0.6
+      },
+      "clouds": {
+        "all": 100
+      },
+      "dt": 1673309232,
+      "sys": {
+        "type": 2,
+        "id": 2078947,
+        "country": "MY",
+        "sunrise": 1673305961,
+        "sunset": 1673349202
+      },
+      "timezone": 28800,
+      "id": "998c341c-f66f-49e0-9c95-1bd704e8bbbc",
+      "name": "Johor",
+      "cod": 200,
+      "dateTime": "2023-01-10T00:10:59.082Z"
+    },
+    {
+      "coord": {
+        "lon": 101.45,
+        "lat": 3.0333
+      },
+      "weather": [
+        {
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02d"
+        }
+      ],
+      "base": "stations",
+      "main": {
+        "temp": 299.18,
+        "feels_like": 299.18,
+        "temp_min": 298.22,
+        "temp_max": 301.24,
+        "pressure": 1012,
+        "humidity": 89
+      },
+      "visibility": 10000,
+      "wind": {
+        "speed": 1.03,
+        "deg": 0
+      },
+      "clouds": {
+        "all": 20
+      },
+      "dt": 1673310829,
+      "sys": {
+        "type": 1,
+        "id": 9446,
+        "country": "MY",
+        "sunrise": 1673306553,
+        "sunset": 1673349594
+      },
+      "timezone": 28800,
+      "id": "3bb24451-0dbb-40df-9b0c-6f5ecfac1d6c",
+      "name": "Klang",
+      "cod": 200,
+      "dateTime": "2023-01-10T00:33:49.284Z"
+    },
+    {
+      "coord": {
+        "lon": 103.5,
+        "lat": 2
+      },
+      "weather": [
+        {
+          "id": 804,
+          "main": "Clouds",
+          "description": "overcast clouds",
+          "icon": "04d"
+        }
+      ],
+      "base": "stations",
+      "main": {
+        "temp": 300.58,
+        "feels_like": 305.41,
+        "temp_min": 296.61,
+        "temp_max": 300.64,
+        "pressure": 1013,
+        "humidity": 92,
+        "sea_level": 1013,
+        "grnd_level": 1002
+      },
+      "visibility": 10000,
+      "wind": {
+        "speed": 0.38,
+        "deg": 66,
+        "gust": 0.71
+      },
+      "clouds": {
+        "all": 100
+      },
+      "dt": 1673311330,
+      "sys": {
+        "type": 2,
+        "id": 2078507,
+        "country": "MY",
+        "sunrise": 1673305961,
+        "sunset": 1673349202
+      },
+      "timezone": 28800,
+      "id": "bc52bcad-e2c3-4a3c-abc3-0db31dc256be",
+      "name": "Johor",
+      "cod": 200,
+      "dateTime": "2023-01-10T00:42:10.530Z"
     }
   ]
 }

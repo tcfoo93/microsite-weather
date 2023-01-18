@@ -1,14 +1,13 @@
 import { lazy, Suspense } from 'react'
 import { BrowserRouter } from 'react-router-dom'
 import { AppConstants } from './MicrositeWeather.constants'
-import { IAppState } from './MicrositeWeather.interface'
 
 const LandingPage = lazy(() => import(`@src/app/pages/Landing/Landing.route`))
 
-const App = (props: IAppState) => {
+const App = () => {
 	return (
 		<Suspense fallback={<span />}>
-			<BrowserRouter basename={AppConstants.publicPath}>
+			<BrowserRouter>
 				<div className={`${AppConstants.appName}-app-root`}>
 					<LandingPage index={true}/>
 				</div>

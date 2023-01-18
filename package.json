@@ -13,6 +13,7 @@
         "db:serve": "json-server --watch scripts/db.json --port=3009"
     },
     "dependencies": {
+        "@module-federation/typescript": "2.1.2",
         "@ngneat/elf": "1.5.6",
         "@ngneat/elf-persist-state": "1.1.1",
         "axios": "^1.2.2",
